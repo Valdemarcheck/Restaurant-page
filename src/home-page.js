@@ -5,10 +5,12 @@ export default () => {
   const header = generateHeader();
   const hero = generateHeroSection();
   const bestDishes = generateDishesSection();
+  const footer = generateFooter();
 
   content.appendChild(header);
   content.appendChild(hero);
   content.appendChild(bestDishes);
+  content.appendChild(footer);
 };
 
 function generateHeader() {
@@ -108,6 +110,23 @@ function generateDishesSection() {
   }
 
   return section;
+}
+
+function generateFooter() {
+  const footer = document.createElement("footer");
+
+  const span = document.createElement("span");
+  span.textContent = "Made by ";
+
+  const githubLink = document.createElement("a");
+  githubLink.textContent = "Valdemar_check";
+  githubLink.setAttribute("href", "https://github.com/Valdemarcheck");
+  githubLink.setAttribute("target", "_blank");
+
+  span.appendChild(githubLink);
+  footer.appendChild(span);
+
+  return footer;
 }
 
 function cleanName(name) {
