@@ -1,6 +1,7 @@
+import cardData from "./card-data";
+
 export default () => {
   const content = document.getElementById("content");
-  console.log(content);
 
   const header = generateHeader();
   const hero = generateHeroSection();
@@ -88,22 +89,24 @@ function generateDishesSection() {
   section.appendChild(cards);
 
   for (let i = 0; i < 3; i++) {
+    const data = cardData[i];
+
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
 
     const img = document.createElement("img");
-    img.setAttribute("alt", "placeholder");
+    img.setAttribute("alt", data.img.alt);
     cardDiv.appendChild(img);
 
     const hr = document.createElement("hr");
     cardDiv.appendChild(hr);
 
     const h2 = document.createElement("h2");
-    h2.textContent = "Random dish";
+    h2.textContent = data.title;
     cardDiv.appendChild(h2);
 
     const p = document.createElement("p");
-    p.textContent = "This is a random description of some random bootleg dish.";
+    p.textContent = data.description;
     cardDiv.appendChild(p);
 
     cards.appendChild(cardDiv);
