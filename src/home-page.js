@@ -4,9 +4,11 @@ export default () => {
 
   const header = generateHeader();
   const hero = generateHeroSection();
+  const bestDishes = generateDishesSection();
 
   content.appendChild(header);
   content.appendChild(hero);
+  content.appendChild(bestDishes);
 };
 
 function generateHeader() {
@@ -68,6 +70,43 @@ function generateHeroSection() {
 
   section.appendChild(left);
   section.appendChild(right);
+  return section;
+}
+
+function generateDishesSection() {
+  const section = document.createElement("section");
+  section.id = "best-dishes";
+
+  const h2 = document.createElement("h2");
+  h2.textContent = "Our best dishes";
+  section.appendChild(h2);
+
+  const cards = document.createElement("div");
+  cards.id = "cards";
+  section.appendChild(cards);
+
+  for (let i = 0; i < 3; i++) {
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
+
+    const img = document.createElement("img");
+    img.setAttribute("alt", "placeholder");
+    cardDiv.appendChild(img);
+
+    const hr = document.createElement("hr");
+    cardDiv.appendChild(hr);
+
+    const h2 = document.createElement("h2");
+    h2.textContent = "Random dish";
+    cardDiv.appendChild(h2);
+
+    const p = document.createElement("p");
+    p.textContent = "This is a random description of some random bootleg dish.";
+    cardDiv.appendChild(p);
+
+    cards.appendChild(cardDiv);
+  }
+
   return section;
 }
 
