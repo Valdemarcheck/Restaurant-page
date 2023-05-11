@@ -3,11 +3,9 @@ import cardData from "./card-data";
 export default function (content) {
   const hero = generateHeroSection();
   const bestDishes = generateDishesSection();
-  const footer = generateFooter();
 
   content.appendChild(hero);
   content.appendChild(bestDishes);
-  content.appendChild(footer);
 }
 
 function generateHeroSection() {
@@ -78,21 +76,4 @@ function generateDishesSection(content) {
   }
 
   return section;
-}
-
-function generateFooter(content) {
-  const footer = document.createElement("footer");
-
-  const span = document.createElement("span");
-  span.textContent = "Made by ";
-
-  const githubLink = document.createElement("a");
-  githubLink.textContent = "Valdemar_check";
-  githubLink.setAttribute("href", "https://github.com/Valdemarcheck");
-  githubLink.setAttribute("target", "_blank");
-
-  span.appendChild(githubLink);
-  footer.appendChild(span);
-
-  return footer;
 }

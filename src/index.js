@@ -3,6 +3,7 @@ import generateAboutUsPage from "./about-us";
 import generateMenuPage from "./menu";
 
 const content = document.getElementById("content");
+
 const header = ((content) => {
   const header = document.createElement("header");
   const nav = document.createElement("nav");
@@ -33,6 +34,22 @@ const header = ((content) => {
 
   return header;
 })(content);
+const footer = (() => {
+  const footer = document.createElement("footer");
+
+  const span = document.createElement("span");
+  span.textContent = "Made by ";
+
+  const githubLink = document.createElement("a");
+  githubLink.textContent = "Valdemar_check";
+  githubLink.setAttribute("href", "https://github.com/Valdemarcheck");
+  githubLink.setAttribute("target", "_blank");
+
+  span.appendChild(githubLink);
+  footer.appendChild(span);
+
+  return footer;
+})();
 
 function generateOtherPage(e, content) {
   clearPage(content);
@@ -46,6 +63,8 @@ function generateOtherPage(e, content) {
   } else if (buttonId === "menu") {
     generateMenuPage(content);
   }
+
+  content.appendChild(footer);
 }
 
 function clearPage(content) {
@@ -57,5 +76,10 @@ function cleanName(name) {
   return capitalized;
 }
 
-content.appendChild(header);
-generateHomePage(content);
+function initialGeneration(content) {
+  content.appendChild(header);
+  generateHomePage(content);
+  content.appendChild(footer);
+}
+
+initialGeneration(content);
