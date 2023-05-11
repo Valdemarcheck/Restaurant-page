@@ -1,4 +1,6 @@
 import generateHomePage from "./home-page";
+import generateAboutUsPage from "./about-us";
+import generateMenuPage from "./menu";
 
 const content = document.getElementById("content");
 const header = ((content) => {
@@ -36,8 +38,13 @@ function generateOtherPage(e, content) {
   clearPage(content);
   content.appendChild(header);
   const buttonId = e.target.id;
+
   if (buttonId === "home") {
     generateHomePage(content);
+  } else if (buttonId === "about-us") {
+    generateAboutUsPage(content);
+  } else if (buttonId === "menu") {
+    generateMenuPage(content);
   }
 }
 

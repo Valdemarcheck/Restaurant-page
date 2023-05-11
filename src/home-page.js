@@ -1,6 +1,6 @@
 import cardData from "./card-data";
 
-export default function generateHomePage(content) {
+export default function (content) {
   const hero = generateHeroSection();
   const bestDishes = generateDishesSection();
   const footer = generateFooter();
