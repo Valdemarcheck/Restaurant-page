@@ -1,48 +1,13 @@
 import cardData from "./card-data";
 
-export default () => {
-  const content = document.getElementById("content");
-
-  const header = generateHeader();
+export default function generateHomePage(content) {
   const hero = generateHeroSection();
   const bestDishes = generateDishesSection();
   const footer = generateFooter();
 
-  content.appendChild(header);
   content.appendChild(hero);
   content.appendChild(bestDishes);
   content.appendChild(footer);
-};
-
-function generateHeader() {
-  const header = document.createElement("header");
-  const nav = document.createElement("nav");
-  const ul = document.createElement("ul");
-  ul.id = "pages";
-
-  const pageIDs = ["home", "about-us", "menu"];
-  for (let id of pageIDs) {
-    const button = document.createElement("button");
-    button.id = id;
-    button.textContent = cleanName(id);
-
-    const li = document.createElement("li");
-    li.appendChild(button);
-
-    ul.appendChild(li);
-  }
-
-  nav.appendChild(ul);
-  header.appendChild(nav);
-
-  const h1 = document.createElement("h1");
-  const hr = document.createElement("hr");
-  h1.textContent = "Georgian cuisine";
-
-  header.appendChild(h1);
-  header.appendChild(hr);
-
-  return header;
 }
 
 function generateHeroSection() {
@@ -76,7 +41,7 @@ function generateHeroSection() {
   return section;
 }
 
-function generateDishesSection() {
+function generateDishesSection(content) {
   const section = document.createElement("section");
   section.id = "best-dishes";
 
@@ -115,7 +80,7 @@ function generateDishesSection() {
   return section;
 }
 
-function generateFooter() {
+function generateFooter(content) {
   const footer = document.createElement("footer");
 
   const span = document.createElement("span");
@@ -130,9 +95,4 @@ function generateFooter() {
   footer.appendChild(span);
 
   return footer;
-}
-
-function cleanName(name) {
-  let capitalized = name[0].toUpperCase() + name.substring(1, name.length);
-  return capitalized;
 }
