@@ -52,7 +52,7 @@ function generateDishesSection(content) {
   section.appendChild(cards);
 
   for (let i = 0; i < 3; i++) {
-    const data = cardData[i];
+    const data = cardData.menu[i];
     console.log(data.img.src);
 
     const cardDiv = document.createElement("div");
