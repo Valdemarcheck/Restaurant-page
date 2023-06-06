@@ -1,4 +1,4 @@
-import cardData from "./cards-data";
+import cardData from "../cards-data";
 
 export default function (content) {
   const hero = generateHeroSection();
@@ -53,13 +53,14 @@ function generateDishesSection(content) {
 
   for (let i = 0; i < 3; i++) {
     const data = cardData[i];
+    console.log(data.img.src);
 
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
 
-    const img = document.createElement("img");
-    img.setAttribute("alt", data.img.alt);
-    cardDiv.appendChild(img);
+    const image = data.img.src;
+    image.alt = data.img.alt;
+    cardDiv.appendChild(image);
 
     const hr = document.createElement("hr");
     cardDiv.appendChild(hr);

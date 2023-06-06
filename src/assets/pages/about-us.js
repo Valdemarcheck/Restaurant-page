@@ -1,4 +1,4 @@
-import cardsData from "./cards-data";
+import cardsData from "../cards-data";
 
 export default function (content) {
   const h2 = document.createElement("h2");

@@ -11,4 +11,20 @@ module.exports = {
   devServer: {
     static: "./dist",
   },
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "images/",
+            },
+          },
+        ],
+      },
+    ],
+  },
 };

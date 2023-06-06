@@ -1,6 +1,6 @@
-import generateHomePage from "./home-page";
-import generateAboutUsPage from "./about-us";
-import generateMenuPage from "./menu";
+import generateHomePage from "./assets/pages/home-page";
+import generateAboutUsPage from "./assets/pages/about-us";
+import generateMenuPage from "./assets/pages/menu";
 
 const content = document.getElementById("content");
 
