@@ -1,3 +1,4 @@
+import cardsData from "../cards-data";
 import cardData from "../cards-data";
 
 export default function (content) {
@@ -14,8 +15,11 @@ function generateHeroSection() {
 
   const left = document.createElement("div");
   left.classList.add("left");
+  section.appendChild(left);
+
   const right = document.createElement("div");
   left.classList.add("right");
+  section.appendChild(right);
 
   const h2 = document.createElement("h2");
   h2.textContent = "A heaven for lovers of Georgia";
@@ -30,12 +34,10 @@ function generateHeroSection() {
   callToActionButton.textContent = "Book a table!";
   left.appendChild(callToActionButton);
 
-  const img = document.createElement("img");
-  img.setAttribute("alt", "placeholder");
+  const img = cardsData.aboutUs[0].img.src;
+  img.alt = cardsData.aboutUs[0].img.alt;
   right.appendChild(img);
 
-  section.appendChild(left);
-  section.appendChild(right);
   return section;
 }
 
@@ -53,7 +55,6 @@ function generateDishesSection(content) {
 
   for (let i = 0; i < 3; i++) {
     const data = cardData.menu[i];
-    console.log(data.img.src);
 
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
