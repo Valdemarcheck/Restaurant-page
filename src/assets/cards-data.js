@@ -1,11 +1,14 @@
-import exampleImage from "./images/image.png";
+import grandmaCooking from "./images/aboutUs/grandmaCooking.jpg";
+import khachapuri from "./images/menu/khachapuri.jpg";
+import khinkali from "./images/menu/khinkali.jpg";
+import churchkhela from "./images/menu/churchkhela.jpg";
 
 export default {
   aboutUs: [
     {
       img: {
-        alt: "placeholder",
-        src: ".",
+        alt: "A grandma cooking a dish",
+        src: image(grandmaCooking),
       },
       title: "WOAH",
       description: "This is a random description of some random bootleg dish.",
@@ -15,7 +18,7 @@ export default {
     {
       img: {
         alt: "placeholder",
-        src: ".",
+        src: image(khachapuri),
       },
       title: "WOAH",
       description: "This is a random description of some random bootleg dish.",
@@ -23,7 +26,7 @@ export default {
     {
       img: {
         alt: "placeholder",
-        src: ".",
+        src: image(khinkali),
       },
       title: "WOAH",
       description: "This is a random description of some random bootleg dish.",
@@ -31,23 +34,7 @@ export default {
     {
       img: {
         alt: "placeholder",
-        src: ".",
-      },
-      title: "WOAH",
-      description: "This is a random description of some random bootleg dish.",
-    },
-    {
-      img: {
-        alt: "placeholder",
-        src: ".",
-      },
-      title: "WOAH",
-      description: "This is a random description of some random bootleg dish.",
-    },
-    {
-      img: {
-        alt: "placeholder",
-        src: ".",
+        src: image(churchkhela),
       },
       title: "WOAH",
       description: "This is a random description of some random bootleg dish.",
@@ -55,8 +42,8 @@ export default {
   ],
 };
 
-function image(reference) {
-  const image = new Image();
+function image(reference, width = 300, height = 300) {
+  const image = new Image(width, height);
   image.src = reference;
   return image;
 }

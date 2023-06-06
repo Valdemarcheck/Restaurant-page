@@ -21,8 +21,8 @@ export default function (content) {
   const right = document.createElement("div");
   right.classList.add("right");
 
-  const img = document.createElement("img");
-  img.setAttribute("alt", "placeholder");
+  const img = cardsData.aboutUs[0].img.src;
+  img.alt = "placeholder";
   right.appendChild(img);
 
   main.appendChild(left);

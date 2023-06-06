@@ -9,7 +9,7 @@ export default function (content) {
   Don't hesitate to try them out yourself!`;
 
   const menu = document.createElement("section");
-  for (let data of Object.values(cardData)) {
+  for (let data of cardData.menu) {
     const card = document.createElement("div");
     card.classList.add("card");
     menu.appendChild(card);
