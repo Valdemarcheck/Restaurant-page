@@ -1,8 +1,10 @@
+// import exampleImage from "./images/example.png";
+
 export default {
   0: {
     img: {
       alt: "placeholder",
-      link: ".",
+      // src: new Image().src(exampleImage), // Creating a DOM element out of it
     },
     title: "Random dish",
     description: "This is a random description of some random bootleg dish.",
@@ -10,7 +12,7 @@ export default {
   1: {
     img: {
       alt: "placeholder",
-      link: ".",
+      src: ".",
     },
     title: "Random dish",
     description: "This is a random description of some random bootleg dish.",
@@ -18,7 +20,7 @@ export default {
   2: {
     img: {
       alt: "placeholder",
-      link: ".",
+      src: ".",
     },
     title: "WOAH",
     description: "This is a random description of some random bootleg dish.",
@@ -26,7 +28,7 @@ export default {
   3: {
     img: {
       alt: "placeholder",
-      link: ".",
+      src: ".",
     },
     title: "WOAH",
     description: "This is a random description of some random bootleg dish.",
@@ -34,7 +36,7 @@ export default {
   4: {
     img: {
       alt: "placeholder",
-      link: ".",
+      src: ".",
     },
     title: "WOAH",
     description: "This is a random description of some random bootleg dish.",
@@ -42,7 +44,7 @@ export default {
   5: {
     img: {
       alt: "placeholder",
-      link: ".",
+      src: ".",
     },
     title: "WOAH",
     description: "This is a random description of some random bootleg dish.",
@@ -50,7 +52,7 @@ export default {
   6: {
     img: {
       alt: "placeholder",
-      link: ".",
+      src: ".",
     },
     title: "WOAH",
     description: "This is a random description of some random bootleg dish.",
@@ -58,7 +60,7 @@ export default {
   7: {
     img: {
       alt: "placeholder",
-      link: ".",
+      src: ".",
     },
     title: "WOAH",
     description: "This is a random description of some random bootleg dish.",
@@ -66,7 +68,7 @@ export default {
   8: {
     img: {
       alt: "placeholder",
-      link: ".",
+      src: ".",
     },
     title: "WOAH",
     description: "This is a random description of some random bootleg dish.",
