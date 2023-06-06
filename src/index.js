@@ -34,6 +34,7 @@ const header = ((content) => {
 
   return header;
 })(content);
+
 const footer = (() => {
   const footer = document.createElement("footer");
 

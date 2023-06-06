@@ -14,8 +14,8 @@ export default function (content) {
     card.classList.add("card");
     menu.appendChild(card);
 
-    const img = document.createElement("img");
-    img.setAttribute("alt", data.img.alt);
+    const img = data.img.src;
+    img.alt = data.img.alt;
     card.appendChild(img);
 
     const hr = document.createElement("hr");
