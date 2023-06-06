@@ -1,5 +1,4 @@
 import cardsData from "../cards-data";
-import cardData from "../cards-data";
 
 export default function (content) {
   const hero = generateHeroSection();
@@ -54,7 +53,7 @@ function generateDishesSection(content) {
   section.appendChild(cards);
 
   for (let i = 0; i < 3; i++) {
-    const data = cardData.menu[i];
+    const data = cardsData.menu[i];
 
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
