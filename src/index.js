@@ -1,7 +1,7 @@
 import generateHomePage from "./assets/pages/homePage";
 import generateAboutUsPage from "./assets/pages/aboutUs";
 import generateMenuPage from "./assets/pages/menu";
-import styles from "./styles.css";
+import "./styles.css";
 
 const content = document.getElementById("content");
 

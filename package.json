@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack serve --open"
+    "build": "webpack && webpack serve --open"
   },
   "author": "Valdemar_check",
   "license": "ISC",
