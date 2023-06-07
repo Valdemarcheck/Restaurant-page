@@ -149,9 +149,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   gap: 1rem;
   flex: 1;
+  width: 100%;
 }
 
 #about-us-main {
@@ -160,6 +160,9 @@ footer {
   justify-items: center;
   gap: 7rem;
   align-items: center;
+  background-color: var(--main-accent);
+  padding: 2rem;
+  width: 100%;
 }
 
 /* Menu page layout */
