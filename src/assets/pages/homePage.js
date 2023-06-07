@@ -17,7 +17,7 @@ function generateHeroSection() {
   section.appendChild(left);
 
   const right = document.createElement("div");
-  left.classList.add("right");
+  right.classList.add("right");
   section.appendChild(right);
 
   const h2 = document.createElement("h2");
