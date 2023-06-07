@@ -1,14 +1,18 @@
 import cardData from "../cards-data";
 
 export default function (content) {
+  const menuSection = document.createElement("section");
+  menuSection.id = "menu-section";
+  content.appendChild(menuSection);
+
   const h2 = document.createElement("h2");
   h2.textContent = "Menu";
-
-  const description = document.createElement("p");
-  description.textContent = `These are our most beloved dishes of all time. 
-  Don't hesitate to try them out yourself!`;
+  menuSection.appendChild(h2);
 
   const menu = document.createElement("section");
+  menu.id = "cards";
+  menuSection.appendChild(menu);
+
   for (let data of cardData.menu) {
     const card = document.createElement("div");
     card.classList.add("card");
@@ -29,8 +33,4 @@ export default function (content) {
     p.textContent = data.description;
     card.appendChild(p);
   }
-
-  content.appendChild(h2);
-  content.appendChild(description);
-  content.appendChild(menu);
 }

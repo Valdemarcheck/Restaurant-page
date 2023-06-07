@@ -48,6 +48,11 @@ function generateDishesSection(content) {
   h2.textContent = "Our best dishes";
   section.appendChild(h2);
 
+  const description = document.createElement("p");
+  description.textContent = `These are our most beloved dishes of all time. 
+  Don't hesitate to try them out yourself!`;
+  section.appendChild(description);
+
   const cards = document.createElement("div");
   cards.id = "cards";
   section.appendChild(cards);
