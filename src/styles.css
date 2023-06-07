@@ -81,11 +81,11 @@ footer {
 
 #cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 20rem);
+  grid-template-columns: repeat(auto-fit, 20rem);
   grid-auto-rows: auto;
   justify-content: center;
   width: 100%;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .card {
@@ -103,9 +103,11 @@ footer {
 /* Homepage layout */
 
 #hero {
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(300px, 700px));
   gap: 7rem;
+  justify-content: center;
   justify-items: center;
   align-items: center;
   padding: 1rem;
