@@ -1,17 +1,21 @@
 import cardsData from "../cards-data";
 
 export default function (content) {
-  const h2 = document.createElement("h2");
-  h2.textContent = "About us";
-  content.appendChild(h2);
-
   const aboutUsSection = document.createElement("section");
   aboutUsSection.id = "about-us-section";
   content.appendChild(aboutUsSection);
 
+  const h2 = document.createElement("h2");
+  h2.textContent = "About us";
+  aboutUsSection.appendChild(h2);
+
+  const aboutUsMain = document.createElement("div");
+  aboutUsMain.id = "about-us-main";
+  aboutUsSection.appendChild(aboutUsMain);
+
   const left = document.createElement("div");
   left.classList.add("left");
-  aboutUsSection.appendChild(left);
+  aboutUsMain.appendChild(left);
 
   const p = document.createElement("p");
   p.textContent = `Our company was founded by Valekzhanin Vladimir in 1992 at
@@ -23,7 +27,7 @@ export default function (content) {
 
   const right = document.createElement("div");
   right.classList.add("right");
-  aboutUsSection.appendChild(right);
+  aboutUsMain.appendChild(right);
 
   const img = cardsData.aboutUs[0].img.src;
   img.alt = "placeholder";
