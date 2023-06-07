@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Cormorant-Garamond-Regular";
+  src: url("./assets/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Cormorant-Garamond-Bold";
+  src: url("./assets/fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("./assets/fonts/Merriweather/Merriweather-Light.ttf")
+    format("truetype");
+}
+
 /* General layout and styles */
 
 * {
@@ -5,6 +23,7 @@
   margin: 0;
   box-sizing: border-box;
   color: rgb(27, 27, 27);
+  font-family: inherit;
 }
 
 :root {
@@ -12,6 +31,15 @@
   color: black;
   --round-corners: 3px;
   --main-accent: rgb(240, 171, 102);
+  font-family: "Merriweather";
+}
+
+h1 {
+  font-family: "Cormorant-Garamond-Bold";
+}
+
+h2 {
+  font-family: "Cormorant-Garamond-Regular";
 }
 
 #content {
