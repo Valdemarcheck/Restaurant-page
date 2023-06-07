@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 
 header {
@@ -26,6 +27,24 @@ header {
   padding: 1rem;
 }
 
+footer {
+  background-color: grey;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 2rem;
+}
+
+#github-link-span {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+}
+
+#github-link-span a {
+  text-decoration: none;
+  color: white;
+}
+
 #page-links {
   gap: 8rem;
   display: flex;
@@ -35,7 +54,6 @@ header {
 }
 
 .page-link-button {
-  color: red;
 }
 
 /* Homepage layout */
@@ -52,4 +70,33 @@ header {
 #hero .left {
   width: 70%;
   max-width: 30rem;
+}
+
+#best-dishes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+  padding: 1rem;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 25rem);
+  grid-auto-rows: auto;
+  min-width: 80%;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.card hr {
+  width: 50%;
 }

@@ -41,6 +41,7 @@ const footer = (() => {
   const footer = document.createElement("footer");
 
   const span = document.createElement("span");
+  span.id = "github-link-span";
   span.textContent = "Made by ";
 
   const githubLink = document.createElement("a");
