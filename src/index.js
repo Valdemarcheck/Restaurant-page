@@ -11,7 +11,7 @@ const header = ((content) => {
   const ul = document.createElement("ul");
   ul.id = "page-links";
 
-  const pageIDs = ["home", "about-us", "menu"];
+  const pageIDs = ["home", "about-us", "our-menu"];
   for (let id of pageIDs) {
     const button = document.createElement("button");
     button.classList.add("page-link-button");
@@ -64,7 +64,7 @@ function generateOtherPage(e, content) {
     generateHomePage(content);
   } else if (buttonId === "about-us") {
     generateAboutUsPage(content);
-  } else if (buttonId === "menu") {
+  } else if (buttonId === "our-menu") {
     generateMenuPage(content);
   }
 

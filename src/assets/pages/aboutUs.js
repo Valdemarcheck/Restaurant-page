@@ -3,31 +3,29 @@ import cardsData from "../cards-data";
 export default function (content) {
   const h2 = document.createElement("h2");
   h2.textContent = "About us";
+  content.appendChild(h2);
 
-  const main = document.createElement("main");
+  const aboutUsSection = document.createElement("section");
+  aboutUsSection.id = "about-us-section";
+  content.appendChild(aboutUsSection);
 
   const left = document.createElement("div");
   left.classList.add("left");
+  aboutUsSection.appendChild(left);
 
   const p = document.createElement("p");
-  p.textContent = `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-  Ipsum accusantium ipsam modi eius. Temporibus iure distinctio numquam 
-  recusandae eos a aperiam autem? Nostrum, reiciendis. Doloribus, hic harum. 
-  Commodi sint tenetur magnam exercitationem, debitis quod excepturi porro, 
-  ipsam voluptatem ex et voluptate doloribus ipsa repellendus repudiandae ad 
-  eaque temporibus maxime ea.`;
+  p.textContent = `Our company was founded by Valekzhanin Vladimir in 1992 at
+  the heart of Georgia - Batumi. The restaurant was first an unknown place
+  hidden inside the city, but after a while people started to notice the
+  extraordinary taste of our dishes, and we became famous. Now we cook over
+  40 different Georgian dishes and drinks, and we even ship them!`;
   left.appendChild(p);
 
   const right = document.createElement("div");
   right.classList.add("right");
+  aboutUsSection.appendChild(right);
 
   const img = cardsData.aboutUs[0].img.src;
   img.alt = "placeholder";
   right.appendChild(img);
-
-  main.appendChild(left);
-  main.appendChild(right);
-
-  content.appendChild(h2);
-  content.appendChild(main);
 }
