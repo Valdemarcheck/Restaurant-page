@@ -9,11 +9,12 @@ const header = ((content) => {
   const header = document.createElement("header");
   const nav = document.createElement("nav");
   const ul = document.createElement("ul");
-  ul.id = "pages";
+  ul.id = "page-links";
 
   const pageIDs = ["home", "about-us", "menu"];
   for (let id of pageIDs) {
     const button = document.createElement("button");
+    button.classList.add("page-link-button");
     button.id = id;
     button.textContent = cleanName(id);
     button.addEventListener("click", (e) => generateOtherPage(e, content));
