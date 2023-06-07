@@ -4,11 +4,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: rgb(27, 27, 27);
 }
 
 :root {
   font-size: 16px;
   color: black;
+  --round-corners: 3px;
+  --main-accent: rgb(240, 171, 102);
 }
 
 #content {
@@ -46,6 +49,10 @@ footer {
   color: white;
 }
 
+#github-link-span a:hover {
+  color: rgb(212, 212, 212);
+}
+
 #page-links {
   gap: 8rem;
   display: flex;
@@ -55,6 +62,14 @@ footer {
 }
 
 .page-link-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--main-accent);
+  border-radius: var(--round-corners);
+}
+
+.page-link-button:hover {
+  background-color: rgb(255, 199, 143);
 }
 
 .left {
@@ -94,6 +109,26 @@ footer {
   justify-items: center;
   align-items: center;
   padding: 1rem;
+  background-color: var(--main-accent);
+}
+
+#hero .left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#call-to-action {
+  width: max-content;
+  padding: 0.6rem 1.2rem;
+  background-color: rgb(67, 67, 67);
+  color: rgb(226, 226, 226);
+  border: none;
+  border-radius: var(--round-corners);
+}
+
+#call-to-action:hover {
+  background-color: rgb(35, 35, 35);
 }
 
 #best-dishes {

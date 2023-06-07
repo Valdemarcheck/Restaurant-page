@@ -30,6 +30,7 @@ function generateHeroSection() {
   left.appendChild(p);
 
   const callToActionButton = document.createElement("button");
+  callToActionButton.id = "call-to-action";
   callToActionButton.textContent = "Book a table!";
   left.appendChild(callToActionButton);
 
